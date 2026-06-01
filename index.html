@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>東京 · 我們的旅程 🌸</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<div id="petals"></div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-deco d1"></div>
+  <div class="hero-deco d2"></div>
+  <div class="hero-inner">
+    <div class="hero-pill">✈ Our Journey &nbsp;·&nbsp; June 2026</div>
+    <div class="hero-jp">東 京</div>
+    <h1 class="hero-title">T<em>o</em>ky<em>o</em></h1>
+    <p class="hero-sub">第一次單獨出國 🌸</p>
+    <div class="hero-dates">
+      <div class="hdb">
+        <div class="hdb-label">✈ 去程</div>
+        <div class="hdb-val">6月12日（四）</div>
+        <div class="hdb-sub">08:50 → 13:15</div>
+      </div>
+      <div class="hdb">
+        <div class="hdb-label">🗾 旅程</div>
+        <div class="hdb-val">7天6夜</div>
+        <div class="hdb-sub">6/12 — 6/18</div>
+      </div>
+      <div class="hdb">
+        <div class="hdb-label">✈ 回程</div>
+        <div class="hdb-val">6月18日（三）</div>
+        <div class="hdb-sub">20:00 起飛</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">SCROLL</div>
+</section>
+
+<!-- NAV -->
+<nav id="mainnav">
+  <button onclick="goTo('flights',this)" class="active">✈ 航班</button>
+  <button onclick="goTo('itinerary',this)">📅 行程</button>
+  <button onclick="goTo('spots',this)">📍 驚喜</button>
+</nav>
+
+<!-- FLIGHTS -->
+<div id="flights">
+<div class="sw">
+  <div class="eyebrow">✈ FLIGHT INFO</div>
+  <h2 class="stitle">航班資訊</h2>
+  <div class="flight-strip">
+    <div class="fi-plane">🛫</div>
+    <div class="fi"><div class="fi-label">出發</div><div class="fi-val">台灣</div><div class="fi-sub">6月12日（四）08:50</div></div>
+    <div class="fi-arrow">→</div>
+    <div class="fi"><div class="fi-label">抵達</div><div class="fi-val">東京 成田</div><div class="fi-sub">6月12日（四）13:15</div></div>
+    <div class="fi" style="text-align:right"><div class="fi-label">飛行時間</div><div class="fi-val">約 3h 25m</div></div>
+  </div>
+  <div class="flight-strip" style="background: linear-gradient(135deg,#7a5060,#a06070)">
+    <div class="fi-plane">🛬</div>
+    <div class="fi"><div class="fi-label">出發</div><div class="fi-val">東京 成田</div><div class="fi-sub">6月18日（三）20:00</div></div>
+    <div class="fi-arrow">→</div>
+    <div class="fi"><div class="fi-label">抵達</div><div class="fi-val">台灣</div><div class="fi-sub">6月18日（三）22:45</div></div>
+    <div class="fi" style="text-align:right"><div class="fi-label">飛行時間</div><div class="fi-val">約 2h 45m</div></div>
+  </div>
+</div>
+</div>
+
+<!-- ITINERARY -->
+<div id="itinerary" style="background:linear-gradient(180deg,var(--cream) 0%,#fff5f8 50%,var(--cream) 100%)">
+<div class="sw">
+  <div class="eyebrow">📅 ITINERARY</div>
+  <h2 class="stitle">每日行程</h2>
+
+  <!-- Day 1 -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-badge">Day 1 · 6/12 五</div>
+      <div class="day-txt">抵達東京 ＋ 太陽城水族館</div>
+      <div class="day-rule"></div>
+    </div>
+    <!-- 交通資訊卡 -->
+    <div style="background: linear-gradient(135deg, #fff9e6 0%, #ffe8cc 100%); padding: 12px 16px; border-radius: 8px; margin-bottom: 15px; font-size: 13px; border-left: 4px solid #ff9800;">
+      <div style="font-weight: 600; margin-bottom: 8px;">🚌 交通資訊</div>
+      <div style="line-height: 1.8; color: #333;">
+        <div>✈️ 成田機場 → 池袋駅：<strong>成田 Shuttle 池袋線</strong> 🚌</div>
+        <div>⏱️ 通勤時間：<strong>約 1 小時 20 分</strong>（直達、舒適）</div>
+        <div>💰 票價：早鳥 ¥1,900 / 現場 ¥2,300</div>
+        <div>🚉 池袋駅 → 新宿駅：<strong>JR山手線</strong> 約10分（¥200）</div>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">13:15 抵達</div>
+        <div class="tl-name">🛬 入境 → 前往太陽城 or 池袋寄物</div>
+        <div class="tl-desc">入境、取行李，搭電車前往太陽城，先在池袋站寄放行李。<a href="https://www.limousinebus.co.jp/ja/line/detail/Narita-IkebukuroLCB/#tm">Airport Limousine Bus</a>池袋駅西口（成田シャトル池袋線）⇔成田空港 線</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">下午</div>
+        <div class="tl-name">🐠 太陽城水族館</div>
+        <div class="tl-desc">位於池袋太陽城60層的都市型水族館，企鵝、水母、海豚表演一應俱全。初抵東京就被海洋世界包圍！</div>
+        <div class="tags"><span class="tag tag-nature">水族館</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">傍晚</div>
+        <div class="tl-name">☀️ 太陽城（包含寶可夢中心）</div>
+        <div class="tl-desc">扭蛋百貨(3F)、寶可夢中心、Snoopy Town Shop、航海王(2F)、LOFT、ABC-MART(1F)、3COINS 日系雜貨(B1F)</div>
+        <div class="tags"><span class="tag tag-shop">購物</span><span class="tag tag-romance">✨ 命運一</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">晚餐</div>
+        <div class="tl-name">🍽 池袋 </div>
+        <div class="tl-desc">池袋周邊餐廳眾多，拉麵、燒肉、居酒屋。</div>
+        <div class="tags"><span class="tag tag-food">晚餐</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">💡 提醒</div>
+        <div class="tl-name">迪士尼小提醒</div>
+        <div class="tl-desc">明天早上要去迪士尼，回去飯店前先買早餐回去</div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Day 2 -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-badge">Day 2 · 6/13 六</div>
+      <div class="day-txt">東京迪士尼（整天）</div>
+      <div class="day-rule"></div>
+    </div>
+    <!-- 交通資訊卡 -->
+    <div style="background: linear-gradient(135deg, #fff9e6 0%, #ffe8cc 100%); padding: 12px 16px; border-radius: 8px; margin-bottom: 15px; font-size: 13px; border-left: 4px solid #ff9800;">
+      <div style="font-weight: 600; margin-bottom: 8px;">🚉 交通資訊</div>
+      <div style="line-height: 1.8; color: #333;">
+        <div>🏨 新宿駅 → 舞濱駅：<strong>JR山手線 + 京葉線</strong> 約30分（¥330）</div>
+        <div>🏰 迪士尼園區內：免費接駁電車 Monorail & Resort Line</div>
+        <div>🚉 舞濱駅 → 新宿駅：<strong>JR京葉線 + 山手線</strong> 約30分（回程）</div>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">全天</div>
+        <div class="tl-name">🏰 東京迪士尼樂園 or 迪士尼海洋</div>
+        <div class="tl-desc">「舞浜駅」、預約等候卡、9:00 - 21:00、煙火20:15( 灰姑娘城堡前方的廣場、明日樂園區。)</div>
+        <div class="tags"><span class="tag tag-disney">🎢 迪士尼</span><span class="tag tag-romance">💕 任務一</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">晚上</div>
+        <div class="tl-name">🏮 新宿周邊散步</div>
+        <div class="tl-desc">不知道逛完迪士尼你有沒有更愛我一點，如果有的話親我一下吧</div>
+        <div class="tags"><span class="tag tag-food">晚餐</span></div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Day 3 -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-badge">Day 3 · 6/14 日</div>
+      <div class="day-txt">吉祥寺 ＋ 吉卜力美術館 ＋ 東京鐵塔</div>
+      <div class="day-rule"></div>
+    </div>
+    <!-- 交通資訊卡 -->
+    <div style="background: linear-gradient(135deg, #fff9e6 0%, #ffe8cc 100%); padding: 12px 16px; border-radius: 8px; margin-bottom: 15px; font-size: 13px; border-left: 4px solid #ff9800;">
+      <div style="font-weight: 600; margin-bottom: 8px;">🚉 交通資訊</div>
+      <div style="line-height: 1.8; color: #333;">
+        <div>🏨 新宿駅 → 吉祥寺駅：<strong>JR中央線 快速</strong> 約15分（¥220）</div>
+        <div>🎨 吉祥寺駅 → 吉卜力美術館：巴士 或 步行 約15分</div>
+        <div>🗼 吉卜力美術館 → 東京鐵塔：電車 + 步行 約60分</div>
+        <div>🏨 濱松町駅 → 新宿駅：<strong>JR山手線</strong> 約25分（回程）</div>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">上午、中午</div>
+        <div class="tl-name">🌿 前往吉祥寺</div>
+        <div class="tl-desc">「吉祥寺駅」，SUNROAD商店街、口琴橫丁，剩下都在google maps了。</div>
+        <div class="tags"><span class="tag tag-shop">購物</span><span class="tag tag-food">午餐</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">下午</div>
+        <div class="tl-name">🎨 三鷹之森 吉卜力美術館</div>
+        <div class="tl-desc">宮崎駿親手設計的夢幻美術館！不知道要寫啥快去找指定東西吧。</div>
+        <div class="tags"><span class="tag tag-disney">吉卜力</span><span class="tag tag-romance">💕 任務二</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">傍晚</div>
+        <div class="tl-name">🗼 Hekkelun ＋ 東京鐵塔（芝公園・増上寺）</div>
+        <div class="tl-desc">夏季約 19:00 點燈，網路說一起看到點燈的情侶會在一起一輩子喔。</div>
+        <div class="tags"><span class="tag tag-view">夜景</span><span class="tag tag-romance">💕 命運二</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">晚餐</div>
+        <div class="tl-name">🍽 銀座</div>
+        <div class="tl-desc">逛街購物，搭日比谷線前往銀座享受東京夜生活。</div>
+        <div class="tags"><span class="tag tag-food">晚餐</span><span class="tag tag-shop">逛街</span></div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Day 4 -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-badge">Day 4 · 6/15 一</div>
+      <div class="day-txt">淺草 ＋ 秋葉原 ＋ 晴空塔</div>
+      <div class="day-rule"></div>
+    </div>
+    <!-- 交通資訊卡 -->
+    <div style="background: linear-gradient(135deg, #fff9e6 0%, #ffe8cc 100%); padding: 12px 16px; border-radius: 8px; margin-bottom: 15px; font-size: 13px; border-left: 4px solid #ff9800;">
+      <div style="font-weight: 600; margin-bottom: 8px;">🚉 交通資訊</div>
+      <div style="line-height: 1.8; color: #333;">
+        <div>🏨 新宿駅 → 淺草駅：<strong>JR山手線 + 東京地鐵銀座線</strong> 約25分（¥210）</div>
+        <div>🎮 淺草 → 上野（Yamashiroya）：<strong>東京地鐵銀座線</strong> 約5分（¥180）</div>
+        <div>🎮 上野 → 秋葉原：<strong>JR山手線</strong> 約2分（¥150）</div>
+        <div>🌅 秋葉原 → 晴空塔（押上駅）：<strong>東京地鐵半藏門線</strong> 約10分（¥200）</div>
+        <div>🏨 錦糸町駅 → 新宿駅：<strong>東京地鐵半藏門線 + JR山手線</strong> 約30分（回程）</div>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">上午</div>
+        <div class="tl-name">🏮 淺草寺 ＋ 雷門 ＋ 仲見世通</div>
+        <div class="tl-desc">手作御守，我猜寶寶會做淺黃色之類的或是tiffany綠嗎</div>
+        <div class="tags"><span class="tag tag-shrine">神社</span><span class="tag tag-shop">伴手禮、購物</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">中午</div>
+        <div class="tl-name">🦐 淺草美食</div>
+        <div class="tl-desc">大黑家天婦羅、天丼、鰻魚飯或和菓子甜點。</div>
+        <div class="tags"><span class="tag tag-food">午餐</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">下午</div>
+        <div class="tl-name">🎮 玩具屋 Yamashiroya ＋ 秋葉原</div>
+        <div class="tl-desc">上野的 Yamashiroya 7層玩具天堂，寶寶最喜歡的，前往秋葉原逛動漫周邊、扭蛋、電器店，視時間也可繞到上野阿美橫商店街。</div>
+        <div class="tags"><span class="tag tag-shop">購物</span><span class="tag tag-disney">動漫</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">傍晚</div>
+        <div class="tl-name">🌅 隅田川 ＋ 晴空塔夕陽展望台</div>
+        <div class="tl-desc">沿隅田川河畔漫步至晴空塔，17:00 前後正好是夕陽時分，要看夕陽</div>
+        <div class="tags"><span class="tag tag-view">夕陽</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">晚上</div>
+        <div class="tl-name">🍻 錦糸町美食</div>
+        <div class="tl-desc">晚餐晚餐要吃什麼勒</div>
+        <div class="tags"><span class="tag tag-food">晚餐</span></div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Day 5 -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-badge">Day 5 · 6/16 二</div>
+      <div class="day-txt">明治神宮 ＋ 原宿 ＋ 澀谷 ＋ SHIBUYA SKY</div>
+      <div class="day-rule"></div>
+    </div>
+    <!-- 交通資訊卡 -->
+    <div style="background: linear-gradient(135deg, #fff9e6 0%, #ffe8cc 100%); padding: 12px 16px; border-radius: 8px; margin-bottom: 15px; font-size: 13px; border-left: 4px solid #ff9800;">
+      <div style="font-weight: 600; margin-bottom: 8px;">🚉 交通資訊</div>
+      <div style="line-height: 1.8; color: #333;">
+        <div>🏨 新宿駅 → 原宿駅：<strong>JR山手線</strong> 約5分（¥150）</div>
+        <div>☕ 原宿 → 澀谷：<strong>步行</strong> 約10-15分 或 <strong>半藏門線</strong> 約3分</div>
+        <div>🏢 澀谷 → SHIBUYA SKY：步行 約3分（在Magnet by Mirabeau建物內）</div>
+        <div>🏨 澀谷駅 → 新宿駅：<strong>JR山手線</strong> 約8分（回程）</div>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">上午（越早越好）</div>
+        <div class="tl-name">⛩ 明治神宮</div>
+        <div class="tl-desc">正殿附近有兩棵被繩子繫住的神木就是夫婦楠。早上人少、光影最美，非常適合拍照留念。</div>
+        <div class="tags"><span class="tag tag-shrine">神社</span><span class="tag tag-nature">自然</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">下午</div>
+        <div class="tl-name">☕ 原宿・表參道 ＋ 澀谷寶可夢中心</div>
+        <div class="tl-desc">表參道悠閒逛咖啡甜點，澀谷寶可夢中心、kiddy land，別忘了找找 fruits and season 的鮮果甜點！</div>
+        <div class="tags"><span class="tag tag-shop">購物</span><span class="tag tag-food">甜點</span><span class="tag tag-romance">✨ 命運三</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">17:45 – 18:15 入場 ⭐</div>
+        <div class="tl-name">🌅 SHIBUYA SKY 展望台</div>
+        <div class="tl-desc">澀谷最高點露天展望台，這個時段正好能看到日落＋夜景交替的畫面！<strong>務必預約 17:45–18:15 時段。</strong></div>
+        <div class="tags"><span class="tag tag-view">夕陽＋夜景</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">晚餐</div>
+        <div class="tl-name">🍽 澀谷 ／ 代官山晚餐</div>
+        <div class="tl-desc">看看我們的時間或是寶寶想去哪裡吃啊，如果很晚可以在澀谷吃就好，明天要早起呦。</div>
+        <div class="tags"><span class="tag tag-food">晚餐</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">💡 提醒</div>
+        <div class="tl-name">開車小提醒</div>
+        <div class="tl-desc">明天早上要很早開車，回去飯店前先買早餐回去</div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Day 6 -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-badge">Day 6 · 6/17 三</div>
+      <div class="day-txt">取車 → 鎌倉 → 史努比博物館 → 河口湖入住</div>
+      <div class="day-rule"></div>
+    </div>
+    <!-- 交通資訊卡 -->
+    <div style="background: linear-gradient(135deg, #fff9e6 0%, #ffe8cc 100%); padding: 12px 16px; border-radius: 8px; margin-bottom: 15px; font-size: 13px; border-left: 4px solid #ff9800;">
+      <div style="font-weight: 600; margin-bottom: 8px;">🚗 自駕路線</div>
+      <div style="line-height: 1.8; color: #333;">
+        <div>🏨 新宿取車 → 鎌倉：<strong>約 60 分鐘</strong> via 高速公路</div>
+        <div>🎢 鎌倉 → 史努比博物館（南町田）：<strong>約 100 分鐘</strong></div>
+        <div>🐶 史努比博物館 → 河口湖：<strong>約 150 分鐘</strong> via 中央高速</div>
+        <div>💡 提醒：ETC卡、停車規則、加油、CarPlay導航</div>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">06:30</div>
+        <div class="tl-name">🚗 出門</div>
+        <div class="tl-desc">從飯店出發前往築地市場。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">07:00</div>
+        <div class="tl-name">🍣 築地市場</div>
+        <div class="tl-desc">新鮮海產、早餐，逛逛市場後前往租車。</div>
+        <div class="tags"><span class="tag tag-food">早餐</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">08:30 – 10:00</div>
+        <div class="tl-name">🚗 租車前往史努比博物館</div>
+        <div class="tl-desc">在新宿／品川／東京站周邊取車。確認 ETC 卡 &amp; CarPlay 導航。</div>
+        <div class="tags"><span class="tag tag-drive">自駕</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">10:00 – 12:30</div>
+        <div class="tl-name">🐶 史努比博物館（南町田 Grandberry Park）</div>
+        <div class="tl-desc">寶寶的最愛！</div>
+        <div class="tags"><span class="tag tag-romance">打卡</span><span class="tag tag-disney">史努比</span><span class="tag tag-romance">💕 任務三</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">12:30 – 13:00</div>
+        <div class="tl-name">☕ Grandberry Park</div>
+        <div class="tl-desc">博物館旁的購物公園內有許多咖啡廳、餐廳，肚子餓的話去買點東西吃就繼續出發河口湖。</div>
+        <div class="tags"><span class="tag tag-food">午餐</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">13:00 – 15:00</div>
+        <div class="tl-name">🚗 開車前往河口湖</div>
+        <div class="tl-desc">約 2 小時車程，沿途可能看到富士山的輪廓。</div>
+        <div class="tags"><span class="tag tag-drive">自駕</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">15:00 – 18:30</div>
+        <div class="tl-name">🏮 河口湖景點遊覽</div>
+        <div class="tl-desc">河口淺間神社、日川時計店、富士吉田懷舊商店街、羅森便利商店，邊逛邊拍景點。</div>
+        <div class="tags"><span class="tag tag-nature">富士山</span><span class="tag tag-shop">伴手禮</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">18:30</div>
+        <div class="tl-name">🚗 開車前往飯店</div>
+        <div class="tl-desc">前往旅館辦理入住。</div>
+        <div class="tags"><span class="tag tag-drive">自駕</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">18:45</div>
+        <div class="tl-name">♨ 入住河口湖旅館</div>
+        <div class="tl-desc">享用晚餐，眺望夜晚的富士山。</div>
+        <div class="tags"><span class="tag tag-food">晚餐</span></div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Day 7 -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-badge">Day 7 · 6/18 四</div>
+      <div class="day-txt">河口湖悠閒富士山日 ＋ 晚上返台 ✈</div>
+      <div class="day-rule"></div>
+    </div>
+    <!-- 交通資訊卡 -->
+    <div style="background: linear-gradient(135deg, #fff9e6 0%, #ffe8cc 100%); padding: 12px 16px; border-radius: 8px; margin-bottom: 15px; font-size: 13px; border-left: 4px solid #ff9800;">
+      <div style="font-weight: 600; margin-bottom: 8px;">🚗 回程自駕路線</div>
+      <div style="line-height: 1.8; color: #333;">
+        <div>🏔️ 河口湖景點遊覽：大橋、淺間神社、新倉山等（本地遊玩）</div>
+        <div>🚗 河口湖 → 成田機場：<strong>約 150-170 分鐘</strong> via 中央高速、東京灣岸道</div>
+        <div>🛣️ 中途停靠：海老名 SA 或 酒酒井 PREMIUM OUTLETS（選擇方案）</div>
+        <div>⛽ 記得：加油、檢查行李、提前還車</div>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">方案一</div>
+        <div class="tl-name">💚 海老名 SA 方案</div>
+        <div class="tl-desc">最推薦，適合想穩妥回程、時間充裕的人。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">09:00 – 10:30</div>
+        <div class="tl-name">🌉 河口湖大橋</div>
+        <div class="tl-desc">早餐 + 拍富士山全景</div>
+        <div class="tags"><span class="tag tag-nature">富士山</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">10:30 – 13:00</div>
+        <div class="tl-name">🚗 河口湖 → 海老名 SA</div>
+        <div class="tl-desc">約 2.5 小時車程</div>
+        <div class="tags"><span class="tag tag-drive">自駕</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">13:00 – 14:00</div>
+        <div class="tl-name">🍱 海老名 SA 午餐</div>
+        <div class="tl-desc">休息、加油、買東西</div>
+        <div class="tags"><span class="tag tag-food">午餐</span><span class="tag tag-drive">加油</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">14:00 – 15:30</div>
+        <div class="tl-name">🚗 海老名 SA → 成田機場</div>
+        <div class="tl-desc">繼續前往成田，預留彈性時間</div>
+        <div class="tags"><span class="tag tag-drive">自駕</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">15:30 – 16:00</div>
+        <div class="tl-name">🚗 成田機場還車</div>
+        <div class="tl-desc">在機場附近完成還車</div>
+        <div class="tags"><span class="tag tag-drive">還車</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">16:00 – 20:00</div>
+        <div class="tl-name">🛫 成田機場逛街吃晚餐</div>
+        <div class="tl-desc">安心完成 check-in、報到、用餐</div>
+        <div class="tags"><span class="tag tag-shop">購物</span><span class="tag tag-food">晚餐</span></div>
+      </div>
+      <div class="tl-item highlight">
+        <div class="tl-dot"></div>
+        <div class="tl-time">20:00</div>
+        <div class="tl-name">✈ 起飛</div>
+        <div class="tl-desc">回台灣 22:45 抵達</div>
+      </div>
+      <div class="tl-item" style="margin-top: 24px; border-top: 1px solid rgba(0,0,0,0.08); padding-top: 16px;">
+        <div class="tl-dot"></div>
+        <div class="tl-time">方案二</div>
+        <div class="tl-name">🛍️ 酒酒井 PREMIUM OUTLETS 方案</div>
+        <div class="tl-desc">備用方案，適合還想買東西的時候。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">09:00 – 10:30</div>
+        <div class="tl-name">🌉 河口湖大橋</div>
+        <div class="tl-desc">早餐 + 拍富士山全景</div>
+        <div class="tags"><span class="tag tag-nature">富士山</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">10:30 – 13:00</div>
+        <div class="tl-name">🚗 河口湖 → 酒酒井</div>
+        <div class="tl-desc">約 2.5-3 小時車程</div>
+        <div class="tags"><span class="tag tag-drive">自駕</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">13:00 – 16:30</div>
+        <div class="tl-name">🛍️ 酒酒井 PREMIUM OUTLETS</div>
+        <div class="tl-desc">午餐 + 逛街購物 + 加油</div>
+        <div class="tags"><span class="tag tag-shop">購物</span><span class="tag tag-food">午餐</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">16:30 – 17:00</div>
+        <div class="tl-name">🚗 成田機場還車</div>
+        <div class="tl-desc">直接還車，準備進機場</div>
+        <div class="tags"><span class="tag tag-drive">還車</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-time">17:00 – 20:00</div>
+        <div class="tl-name">🛫 成田機場逛街吃晚餐</div>
+        <div class="tl-desc">check-in、報到托運、用餐</div>
+        <div class="tags"><span class="tag tag-shop">購物</span><span class="tag tag-food">晚餐</span></div>
+      </div>
+      <div class="tl-item highlight">
+        <div class="tl-dot"></div>
+        <div class="tl-time">20:00</div>
+        <div class="tl-name">✈ 起飛</div>
+        <div class="tl-desc">回台灣 22:45 抵達</div>
+      </div>
+    </div>
+  </div>
+ 
+</div>
+</div>
+<!-- mission -->
+<div id="spots">
+  <div class="sw">
+    <div class="eyebrow">💖 MISSIONS</div>
+    <h2 class="stitle">命運與驚喜卡牌</h2>
+
+    <div class="mission-grid">
+
+      <div class="mission-gate" id="gate-mission1">
+        <div class="mission-lock-card">
+          <div class="mission-label">✨ 命運一</div>
+          <div class="mission-title">太陽城尋寶</div>
+          <div class="mission-sub">輸入專屬密碼解鎖內容</div>
+          <input id="mission-password-mission1" type="password" placeholder="輸入密碼" aria-label="命運一密碼" />
+          <button type="button" onclick="unlockMission('mission1')">解鎖命運一</button>
+          <p class="mission-lock-msg" id="mission-lock-msg-mission1"></p>
+        </div>
+        <div class="mission-card" id="mission-card-mission1">
+          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div class="mission-label">✨ 命運一</div>
+                <div class="mission-icon"><img src="波波.png" alt="波波"></div>
+                <div class="mission-title">太陽城尋寶</div>
+                <div class="mission-sub">5分鐘內找到波加曼</div>
+              </div>
+              <div class="flip-card-back">
+                <div class="mission-back-title">✨ 命運一</div>
+                <div class="mission-task">5分鐘內在太陽城找到波加曼（任何商品都可以），找到就可以任選一家店，5分鐘的購買時間。失敗了就要全程牽我的手逛街。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mission-gate" id="gate-mission2">
+        <div class="mission-lock-card">
+          <div class="mission-label">💕 任務一</div>
+          <div class="mission-title">迪士尼尋圖</div>
+          <div class="mission-sub">輸入專屬密碼解鎖內容</div>
+          <input id="mission-password-mission2" type="password" placeholder="輸入密碼" aria-label="任務一密碼" />
+          <button type="button" onclick="unlockMission('mission2')">解鎖任務一</button>
+          <p class="mission-lock-msg" id="mission-lock-msg-mission2"></p>
+        </div>
+        <div class="mission-card" id="mission-card-mission2">
+          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div class="mission-label">💕 任務一</div>
+                <div class="mission-icon"><img src="micky.png" alt="米奇"></div>
+                <div class="mission-title">迪士尼尋圖</div>
+                <div class="mission-sub">找到卡牌上的圖片</div>
+              </div>
+              <div class="flip-card-back">
+                <div class="mission-back-title">💕 任務一</div>
+                <div class="mission-task">在迪士尼找到我放在卡牌上的圖片，只要找到就可以在迪士尼任選一樣禮物。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mission-gate" id="gate-mission3">
+        <div class="mission-lock-card">
+          <div class="mission-label">💕 任務二</div>
+          <div class="mission-title">美術館尋圖</div>
+          <div class="mission-sub">輸入專屬密碼解鎖內容</div>
+          <input id="mission-password-mission3" type="password" placeholder="輸入密碼" aria-label="任務二密碼" />
+          <button type="button" onclick="unlockMission('mission3')">解鎖任務二</button>
+          <p class="mission-lock-msg" id="mission-lock-msg-mission3"></p>
+        </div>
+        <div class="mission-card" id="mission-card-mission3">
+          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div class="mission-label">💕 任務二</div>
+                <div class="mission-icon"><img src="black.jpeg" alt="煤炭"></div>
+                <div class="mission-title">美術館尋圖</div>
+                <div class="mission-sub">找到卡牌上的圖片</div>
+              </div>
+              <div class="flip-card-back">
+                <div class="mission-back-title">💕 任務二</div>
+                <div class="mission-task">在美術館找到我放在卡牌上的圖片，只要找到就可以在美術館任選一樣禮物。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mission-gate" id="gate-mission4">
+        <div class="mission-lock-card">
+          <div class="mission-label">✨ 命運二</div>
+          <div class="mission-title">東京鐵塔記錄</div>
+          <div class="mission-sub">輸入專屬密碼解鎖內容</div>
+          <input id="mission-password-mission4" type="password" placeholder="輸入密碼" aria-label="命運二密碼" />
+          <button type="button" onclick="unlockMission('mission4')">解鎖命運二</button>
+          <p class="mission-lock-msg" id="mission-lock-msg-mission4"></p>
+        </div>
+        <div class="mission-card" id="mission-card-mission4">
+          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div class="mission-label">✨ 命運二</div>
+                <div class="mission-icon">🗼</div>
+                <div class="mission-title">東京鐵塔記錄</div>
+                <div class="mission-sub">錄影到點燈瞬間</div>
+              </div>
+              <div class="flip-card-back">
+                <div class="mission-back-title">✨ 命運二</div>
+                <div class="mission-task">在東京鐵塔錄影到點燈的瞬間，如果成功會有小禮物，失敗的話要在東京鐵塔親我臉頰一下嘻嘻。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mission-gate" id="gate-mission5">
+        <div class="mission-lock-card">
+          <div class="mission-label">✨ 命運三</div>
+          <div class="mission-title">寶可夢任務</div>
+          <div class="mission-sub">輸入專屬密碼解鎖內容</div>
+          <input id="mission-password-mission5" type="password" placeholder="輸入密碼" aria-label="命運三密碼" />
+          <button type="button" onclick="unlockMission('mission5')">解鎖命運三</button>
+          <p class="mission-lock-msg" id="mission-lock-msg-mission5"></p>
+        </div>
+        <div class="mission-card" id="mission-card-mission5">
+          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div class="mission-label">✨ 命運三</div>
+                <div class="mission-icon">💌</div>
+                <div class="mission-title">寶可夢猜樓層</div>
+                <div class="mission-sub">猜寶可夢中心幾樓</div>
+              </div>
+              <div class="flip-card-back">
+                <div class="mission-back-title">✨ 命運三</div>
+                <div class="mission-task">猜寶可夢中心在幾樓，猜對的話今天扭蛋我買單，失敗了就要請我吃午餐喽。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mission-gate" id="gate-mission6">
+        <div class="mission-lock-card">
+          <div class="mission-label">💕 任務三</div>
+          <div class="mission-title">史努比博物館</div>
+          <div class="mission-sub">輸入專屬密碼解鎖內容</div>
+          <input id="mission-password-mission6" type="password" placeholder="輸入密碼" aria-label="任務三密碼" />
+          <button type="button" onclick="unlockMission('mission6')">解鎖任務三</button>
+          <p class="mission-lock-msg" id="mission-lock-msg-mission6"></p>
+        </div>
+        <div class="mission-card" id="mission-card-mission6">
+          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div class="mission-label">💕 任務三</div>
+                <div class="mission-icon">🐶</div>
+                <div class="mission-title">史努比博物館</div>
+                <div class="mission-sub">猜史努比的品種</div>
+              </div>
+              <div class="flip-card-back">
+                <div class="mission-back-title">💕 任務三</div>
+                <div class="mission-task">猜史努比的品種，有三次機會。猜對就可以在史努比博物館選一樣禮物！</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="sdiv">🌸 · · · 🌸 · · · 🌸</div>
+
+<footer>
+  <div class="fe">✈️ 🗼 🌸</div>
+  <p>
+    <strong>東京 · 2026年6月12日 – 6月18日</strong><br>
+    希望我們吃好喝好，不要吵架 💕
+  </p>
+</footer>
+
+<script src="script.js"></script>
