@@ -575,6 +575,17 @@ nav button.active { border-color: var(--rose); color: var(--rose-dark); backgrou
   #gate-mission7 .envelope-input-wrap {
     flex-direction: column;
     align-items: stretch;
+    width: 100%;
+  }
+  /* In a column flex container, flex-basis becomes height — reset so the input
+     stays a normal-height pill instead of stretching into a giant oval. */
+  #gate-mission7 input[type="password"] {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+  }
+  #gate-mission7 .envelope-locked button {
+    width: 100%;
   }
 }
 
