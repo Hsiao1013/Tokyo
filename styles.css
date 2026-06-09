@@ -151,10 +151,222 @@ nav button.active { border-color: var(--rose); color: var(--rose-dark); backgrou
   margin-top:28px;
 }
 
-.mission-gate{
-  display:flex;
-  flex-direction:column;
-  gap:18px;
+/* Display mission cards in itinerary day order (passwords stay tied to each id) */
+#gate-mission2 { order: 1; } /* Day 2 迪士尼 */
+#gate-mission5 { order: 2; } /* Day 3 寶可夢 */
+#gate-mission1 { order: 3; } /* Day 4 太陽城 */
+#gate-mission4 { order: 4; } /* Day 4 東京鐵塔 */
+#gate-mission3 { order: 5; } /* Day 5 淺草 */
+#gate-mission6 { order: 6; } /* Day 6 史努比 */
+#gate-mission7 { order: 7; } /* 最終任務 */
+
+.food-wheel-section {
+  margin-top: 3rem;
+  padding: 2.2rem 1.5rem;
+  background: linear-gradient(160deg, rgba(255,250,245,.95), rgba(255,241,246,.95));
+  border: 1px solid rgba(227,214,224,.7);
+  border-radius: 28px;
+}
+
+.food-wheel-panel {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.food-wheel-head {
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.wheels-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.wheel-card {
+  flex: 1 1 340px;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.wheel-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-align: center;
+}
+
+.wheel-container {
+  position: relative;
+  width: min(340px, 100%);
+  aspect-ratio: 1/1;
+  margin: 0 auto;
+}
+
+.wheel-ring {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 12px solid #fff;
+  box-shadow: 0 18px 44px rgba(154,105,126,.22),
+              0 0 0 6px rgba(255,255,255,.55),
+              0 0 0 7px rgba(232,116,138,.25),
+              inset 0 0 30px rgba(190,122,154,.12);
+  /* 13 soft wedges centred on each label + hairline dividers between them */
+  background:
+    repeating-conic-gradient(from -13.846deg,
+      rgba(255,255,255,.85) 0deg 0.7deg,
+      transparent 0.7deg 27.692deg),
+    repeating-conic-gradient(from -13.846deg,
+      #ffe1ec 0deg 27.692deg,
+      #fdeef5 27.692deg 55.385deg);
+  transition: transform 4s cubic-bezier(.22,.61,.36,1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Center hub */
+.wheel-ring::after {
+  content: '🍱';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 68px;
+  height: 68px;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #ffffff 0%, #ffe3ee 100%);
+  border: 4px solid #fff;
+  box-shadow: 0 4px 14px rgba(190,80,120,.22);
+  z-index: 4;
+}
+
+.wheel-ring.buy::after {
+  content: '🛍';
+  background: radial-gradient(circle at 35% 30%, #ffffff 0%, #ffe9da 100%);
+}
+
+.wheel-label {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform-origin: 0 0;
+  text-align: center;
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: .03em;
+  line-height: 1.2;
+  white-space: nowrap;
+  transform: none; /* will be set by JS per label */
+  z-index: 2;
+}
+
+.wheel-label::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: -2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--rose);
+}
+
+.wheel-pointer {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  font-size: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 26px solid var(--rose-deep);
+  filter: drop-shadow(0 4px 4px rgba(0,0,0,.18));
+  pointer-events: none;
+  z-index: 6;
+}
+
+.wheel-button {
+  border:none;
+  border-radius:999px;
+  padding:1rem 2rem;
+  font-size: 1.05rem;
+  font-weight:700;
+  letter-spacing: .05em;
+  background: linear-gradient(135deg, #f0879b 0%, #d65c80 100%);
+  color:white;
+  cursor:pointer;
+  width: fit-content;
+  justify-self: start;
+  box-shadow: 0 12px 26px rgba(206,85,129,.32);
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+
+.wheel-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(206,85,129,.4);
+}
+
+.wheel-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.wheel-button:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+.wheel-result {
+  margin-top: 1.2rem;
+  padding: 1.1rem 1.3rem;
+  border-radius: 1.4rem;
+  background: rgba(255,255,255,.95);
+  border: 1px solid rgba(255,209,227,.85);
+  box-shadow: 0 10px 26px rgba(190,122,154,.12);
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.7;
+  width: 100%;
+  text-align: center;
+  opacity: .7;
+  transition: opacity .3s ease, transform .3s ease;
+}
+
+.wheel-result.pop {
+  opacity: 1;
+  transform: scale(1.04);
+  animation: resultPop .45s ease;
+}
+
+@keyframes resultPop {
+  0%   { transform: scale(.9); }
+  60%  { transform: scale(1.08); }
+  100% { transform: scale(1.04); }
+}
+
+@media (max-width: 720px) {
+  .wheels-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  .wheel-card {
+    width: 100%;
+  }
 }
 
 .mission-lock-card,
@@ -180,6 +392,190 @@ nav button.active { border-color: var(--rose); color: var(--rose-dark); backgrou
 
 .mission-lock-card{
   text-align:center;
+}
+
+#gate-mission7 {
+  grid-column: 1 / -1;
+}
+
+.mission-envelope-card {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  filter: drop-shadow(0 22px 42px rgba(190, 122, 154, 0.2));
+}
+
+/* Envelope flap (triangular fold) */
+#gate-mission7 .envelope-top {
+  position: relative;
+  width: 100%;
+  height: 104px;
+  background: linear-gradient(160deg, #fbd9e7 0%, #f3c4da 100%);
+  border: 1px solid rgba(208, 158, 180, 0.55);
+  border-bottom: none;
+  border-radius: 26px 26px 0 0;
+  z-index: 2;
+}
+
+/* The downward fold of the flap */
+#gate-mission7 .envelope-top::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(155deg, #f7cfe1 0%, #ecadcb 100%);
+  border-radius: 26px 26px 0 0;
+  clip-path: polygon(0 0, 100% 0, 50% 92%);
+  box-shadow: inset 0 -2px 6px rgba(190, 122, 154, 0.12);
+}
+
+/* Wax seal where the flap meets the body */
+#gate-mission7 .envelope-top::after {
+  content: '🌸';
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -55%);
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+  background: radial-gradient(circle at 34% 28%, #f79bab 0%, #d75d80 70%, #c2567a 100%);
+  border-radius: 50%;
+  box-shadow: 0 6px 16px rgba(190, 80, 120, 0.35),
+              inset 0 2px 4px rgba(255, 255, 255, 0.45),
+              inset 0 -3px 6px rgba(140, 50, 80, 0.3);
+  z-index: 5;
+}
+
+#gate-mission7 .envelope-body {
+  position: relative;
+  margin-top: -52px;
+  background: linear-gradient(160deg, #fffafc 0%, #ffeef4 100%);
+  border: 1px solid rgba(208, 158, 180, 0.55);
+  border-radius: 0 0 26px 26px;
+  padding: 64px 30px 32px;
+  display: grid;
+  gap: 18px;
+  z-index: 1;
+}
+
+#gate-mission7 .envelope-locked {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+#gate-mission7 .envelope-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+#gate-mission7 .mission-label,
+#gate-mission7 .mission-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  margin-bottom: 0;
+}
+
+#gate-mission7 .mission-label {
+  color: #b85a7f;
+}
+
+#gate-mission7 .mission-title {
+  color: #5b3f50;
+}
+
+#gate-mission7 .envelope-locked,
+#gate-mission7 .envelope-unlocked {
+  width: 100%;
+}
+
+#gate-mission7 .envelope-unlocked {
+  display: none;
+}
+
+#gate-mission7.unlocked .envelope-locked {
+  display: none;
+}
+
+#gate-mission7.unlocked .envelope-unlocked {
+  display: block;
+}
+
+#gate-mission7 .envelope-input-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+}
+
+#gate-mission7 input[type="password"] {
+  flex: 1 1 240px;
+  min-width: 200px;
+  max-width: 360px;
+  padding: 1rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(210, 173, 187, .6);
+  background: #fff;
+  color: var(--ink);
+}
+
+#gate-mission7 .envelope-locked button {
+  border:none;
+  border-radius:999px;
+  padding:.95rem 1.4rem;
+  font-weight:700;
+  background: var(--rose);
+  color:white;
+  cursor:pointer;
+}
+
+#gate-mission7 input[type="password"]:focus {
+  outline: none;
+  box-shadow: 0 8px 24px rgba(232,116,138,.08);
+  border-color: rgba(194,86,122,.8);
+}
+
+#gate-mission7 .envelope-content {
+  background: #ffffff;
+  border-radius: 22px;
+  border: 1px solid rgba(245, 209, 222, .9);
+  padding: 24px 22px;
+}
+
+#gate-mission7 .envelope-content .mission-sub {
+  margin-bottom: 1rem;
+}
+
+#gate-mission7 .envelope-content .mission-task {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #4f323f;
+}
+
+@media (max-width: 900px) {
+  #gate-mission7 .envelope-top {
+    height: 84px;
+  }
+  #gate-mission7 .envelope-body {
+    margin-top: -46px;
+    padding: 56px 18px 22px;
+  }
+  #gate-mission7 .envelope-input-wrap {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
 .mission-lock-card .mission-label,
